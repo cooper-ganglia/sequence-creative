@@ -20,3 +20,5 @@ Open `http://localhost:4173`.
 - Regenerate the pages after changing `generate.mjs`.
 
 The three sample portfolio stills are illustrative concepts. The original brand reference files remain untouched in `preview assets/`.
+
+The favicon uses the supplied square Sequence Creative icon from the additional brand asset pack.
