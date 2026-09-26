@@ -15,7 +15,7 @@ Open `http://localhost:4173`.
 
 - Add real project titles, artists or clients, descriptions, credits, stills, and video embeds. Project data lives in `dist/site.js`; portfolio cards live in `generate.mjs`.
 - Add founders' names, roles, and portraits on the About page in `generate.mjs`.
-- Replace `hello@sequencecreative.com` in `generate.mjs` and `dist/site.js` with the real studio address. The inquiry form opens a prefilled email draft.
+- Replace `hello@sequencecreative.com` in `generate.mjs` and `dist/site.js` with the real studio address. The inquiry form opens a prefilled Gmail draft in a new tab.
 - Add real Instagram and YouTube or Vimeo links in `generate.mjs`.
 - Regenerate the pages after changing `generate.mjs`.
 
