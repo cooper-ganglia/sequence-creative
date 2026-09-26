@@ -12,10 +12,10 @@ if(motionOK){
       const x=(event.clientX-box.left)/box.width;
       const y=(event.clientY-box.top)/box.height;
       frame=requestAnimationFrame(()=>{
-        card.style.setProperty('--tilt-x',`${((.5-y)*5).toFixed(2)}deg`);
-        card.style.setProperty('--tilt-y',`${((x-.5)*5).toFixed(2)}deg`);
-        card.style.setProperty('--image-x',`${((x-.5)*-9).toFixed(1)}px`);
-        card.style.setProperty('--image-y',`${((y-.5)*-9).toFixed(1)}px`);
+        card.style.setProperty('--tilt-x',`${((.5-y)*2).toFixed(2)}deg`);
+        card.style.setProperty('--tilt-y',`${((x-.5)*2).toFixed(2)}deg`);
+        card.style.setProperty('--image-x',`${((x-.5)*-4).toFixed(1)}px`);
+        card.style.setProperty('--image-y',`${((y-.5)*-4).toFixed(1)}px`);
       });
     });
     card.addEventListener('pointerleave',()=>{

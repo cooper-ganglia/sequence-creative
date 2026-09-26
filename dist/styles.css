@@ -209,12 +209,12 @@ button{cursor:pointer}
 .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .featured-grid .project-card{grid-column:auto}
 .project-thumb{aspect-ratio:16/9;isolation:isolate}
-.project-thumb img{transform:translate(var(--image-x,0px),var(--image-y,0px)) scale(1.035);transition:transform .4s ease,filter .5s ease}
-.project-card:hover .project-thumb img{transform:translate(var(--image-x,0px),var(--image-y,0px)) scale(1.09);filter:saturate(1.08)}
+.project-thumb img{transform:translate(var(--image-x,0px),var(--image-y,0px)) scale(1.02);transition:transform .4s ease,filter .5s ease}
+.project-card:hover .project-thumb img{transform:translate(var(--image-x,0px),var(--image-y,0px)) scale(1.055);filter:saturate(1.08)}
 .project-card{transform:perspective(1100px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transform-style:preserve-3d}
 .project-info,.project-number,.project-arrow{transition:transform .35s ease}
-.project-card:hover .project-info{transform:translateY(-5px)}
-.project-card:hover .project-arrow{transform:translate(3px,-3px)}
+.project-card:hover .project-info{transform:translateY(-2px)}
+.project-card:hover .project-arrow{transform:translate(2px,-2px)}
 .motion-reveal{opacity:0;translate:0 22px;transition:opacity .65s ease,translate .65s ease}
 .motion-reveal.is-visible{opacity:1;translate:0 0}
 @media(max-width:640px){.featured-grid{display:block}.project-thumb{aspect-ratio:16/9}.project-info{left:16px;right:16px;bottom:14px}.project-info h3{font-size:22px}.project-info p{font-size:11px}}
