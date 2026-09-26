@@ -17,12 +17,12 @@ Open `http://localhost:4173`.
 
 ## Replace before sharing publicly
 
-- Add real project titles, artists or clients, descriptions, credits, stills, and video embeds. Project data lives in `dist/site.js`; portfolio cards live in `generate.mjs`.
+- Add final descriptions, dates, credits, and film links for the real projects. Project details live in `dist/site.js`; portfolio cards live in `generate.mjs`.
 - Add founders' names, roles, and portraits on the About page in `generate.mjs`.
 - Replace `hello@sequencecreative.com` in `generate.mjs` and `dist/site.js` with the real studio address. The inquiry form opens a prefilled Gmail draft in a new tab.
 - Add real Instagram and YouTube or Vimeo links in `generate.mjs`.
 - Regenerate the pages after changing `generate.mjs`.
 
-The three sample portfolio stills are illustrative concepts. The original brand reference files remain untouched in `preview assets/`.
+The featured cards show Summit 17, Nigel Williams, and WellNews. The Avengers: Endgame card is explicitly marked as a joke placeholder; Sequence Creative did not work on that film. The original brand reference files remain in `preview assets/`.
 
 The favicon uses the supplied square Sequence Creative icon from the additional brand asset pack.

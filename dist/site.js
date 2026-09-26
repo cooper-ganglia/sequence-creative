@@ -2,16 +2,28 @@ const menuButton=document.querySelector('.menu-toggle');
 const navLinks=document.querySelector('.nav-links');
 if(menuButton&&navLinks){menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰'});}
 
-// Sample projects: replace titles, credits, stills, and video URLs when real work is ready.
 const projects={
-  'after-the-noise':{title:'After the Noise',type:'Music Video',subject:'Concept / artist to come',year:'Sample',image:'assets/music-video.webp',description:'An intimate performance-led visual built around one voice, one room, and the space between notes.'},
-  'in-the-room':{title:'In the Room',type:'Live Session',subject:'Concept / artist to come',year:'Sample',image:'assets/live-session.webp',description:'A close-up look at the energy that only happens when a song is played live.'},
-  'hands-at-work':{title:'Hands at Work',type:'Documentary',subject:'Concept / subject to come',year:'Sample',image:'assets/documentary.webp',description:'A quiet portrait of craft, patience, and the people behind the work.'},
-  'the-long-way-home':{title:'The Long Way Home',type:'Short Film',subject:'Concept / collaborators to come',year:'Sample',image:'assets/documentary.webp',description:'A character-led short film concept told through light, place, and small decisions.'},
-  'made-to-move':{title:'Made to Move',type:'Branded Content',subject:'Concept / brand to come',year:'Sample',image:'assets/music-video.webp',description:'A cinematic brand piece with rhythm, texture, and a point of view.'}
+  'we-are-the-light':{title:'We Are the Light',type:'Music Video',subject:'Summit 17',year:'Details coming soon',credits:'Details coming soon',image:'assets/we-are-the-light.webp',description:'A music video for Summit 17.',note:'More details and credits for “We Are the Light” are coming soon.'},
+  'my-story':{title:'My Story',type:'Live Session',subject:'Nigel Williams',year:'Details coming soon',credits:'Details coming soon',image:'assets/my-story.webp',description:'A live session with Nigel Williams.',note:'More details and credits for this live session are coming soon.'},
+  'wellnews':{title:'WellNews',type:'Television',subject:'WellNews health show',year:'Details coming soon',credits:'Details coming soon',image:'assets/wellnews.webp',description:'A health television show produced by Sequence Creative.',note:'More details about our work on WellNews are coming soon.'},
+  'avengers-endgame':{title:'Avengers: Endgame',type:'Joke Placeholder',subject:'Not a Sequence project',year:'Not applicable',credits:'We did not work on this film',image:'assets/avengers-placeholder.webp',description:'Just kidding. We did not make Avengers: Endgame; this card is a temporary placeholder.',note:'We did not work on Avengers: Endgame. This is a joke placeholder until the fourth project is chosen.'}
 };
 const detail=document.querySelector('[data-project-detail]');
-if(detail){const key=new URLSearchParams(location.search).get('project')||'after-the-noise';const p=projects[key]||projects['after-the-noise'];document.title=`${p.title} — Sequence Creative`;document.querySelector('meta[name="description"]').content=`${p.type} sample project from Sequence Creative. ${p.description}`;document.querySelector('meta[property="og:title"]').content=`${p.title} — Sequence Creative`;document.querySelector('meta[property="og:description"]').content=p.description;for(const [selector,value] of [['[data-title]',p.title],['[data-type]',p.type],['[data-subject]',p.subject],['[data-year]',p.year],['[data-description]',p.description]]){document.querySelectorAll(selector).forEach(el=>el.textContent=value)}const hero=document.querySelector('[data-hero-image]');hero.src=p.image;hero.alt=`Concept still for ${p.title}`;document.querySelector('[data-gallery-image]').src=p.image;document.querySelectorAll('.project-card').forEach(card=>{if(card.getAttribute('href')?.includes(`project=${key}`))card.remove()});}
+if(detail){
+  const key=new URLSearchParams(location.search).get('project')||'we-are-the-light';
+  const p=projects[key]||projects['we-are-the-light'];
+  document.title=`${p.title} — Sequence Creative`;
+  document.querySelector('meta[name="description"]').content=p.description;
+  document.querySelector('meta[property="og:title"]').content=`${p.title} — Sequence Creative`;
+  document.querySelector('meta[property="og:description"]').content=p.description;
+  for(const [selector,value] of [['[data-title]',p.title],['[data-type]',p.type],['[data-subject]',p.subject],['[data-year]',p.year],['[data-credits]',p.credits],['[data-description]',p.description],['[data-project-note]',p.note]]){
+    document.querySelectorAll(selector).forEach(el=>el.textContent=value);
+  }
+  const hero=document.querySelector('[data-hero-image]');
+  hero.src=p.image;
+  hero.alt=`${p.title} project image${key==='avengers-endgame'?' used as a joke placeholder':''}`;
+  document.querySelectorAll('.project-card').forEach(card=>{if(card.getAttribute('href')?.includes(`project=${key}`))card.remove();});
+}
 
 const motionOK=window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches;
 if(motionOK){
