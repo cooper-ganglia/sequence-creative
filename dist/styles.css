@@ -234,3 +234,5 @@ button{cursor:pointer}
 .hero-bar{position:absolute;left:var(--bar-left);top:0;width:var(--bar-width);height:23%;display:block;transform:translateY(var(--lift,0px));will-change:transform}
 .hero-bar img{width:100%;height:auto;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.hero-bar{transform:none;will-change:auto}}
+
+.detail-meta .detail-credits{white-space:normal;text-align:right;max-width:68%}.project-note{max-width:700px;color:var(--muted)}
