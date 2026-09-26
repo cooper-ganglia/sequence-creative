@@ -116,9 +116,9 @@ button{cursor:pointer}
 .form-status{grid-column:1/-1;color:var(--yellow);font-size:13px;margin:0}
 .detail-hero{position:relative;aspect-ratio:2.1;max-height:690px;overflow:hidden;background:#342c22}
 .detail-hero img{width:100%;height:100%;object-fit:cover}
-.detail-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;padding:65px 0}
+.detail-intro{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(24px,4vw,70px);padding:65px 0}
 .detail-intro h1{font:600 clamp(52px,7vw,94px)/.98 'Space Grotesk';letter-spacing:-.06em;margin:10px 0}
-.detail-intro p{font-size:clamp(14px,1.15vw,17px);line-height:1.45;max-width:680px;text-wrap:balance}
+.detail-intro p{font-size:clamp(14px,1.15vw,17px);line-height:1.45;text-wrap:balance}
 .detail-meta{border-top:1px solid var(--line)}
 .detail-meta div{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:16px 0;font-size:13px}
 .detail-meta span{color:var(--muted)}
@@ -236,3 +236,5 @@ button{cursor:pointer}
 @media(prefers-reduced-motion:reduce){.hero-bar{transform:none;will-change:auto}}
 
 .detail-meta .detail-credits{white-space:normal;text-align:right;max-width:68%}.project-note{max-width:700px;color:var(--muted)}
+
+@media(min-width:851px){.detail-intro p{white-space:nowrap}}
